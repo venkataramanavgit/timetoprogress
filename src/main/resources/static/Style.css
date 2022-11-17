@@ -1,68 +1,106 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
-
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  background-color: #000;
-  color: #eee;
-}
-
-.container {
-  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
 }
-
-.container p {
+h1 {
+  color: #333;
+  font-family: tahoma;
   font-size: 3rem;
-  padding: 0.5rem;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  text-align: center;
+  font-weight: 100;
+  line-height: 1.7;
+  text-transform: uppercase;
+  white-space: nowrap;
   overflow: hidden;
+  position: relative;
+  width: 560px;
 }
 
-.container p span.typed-text {
-  font-weight: normal;
-  color: #dd7732;
+h1 span {
+  font-size: 40px;
+  margin-left: 40px;
 }
 
-.container p span.cursor {
-  display: inline-block;
-  background-color: #ccc;
-  margin-left: 0.1rem;
-  width: 3px;
-  animation: blink 1s infinite;
+.message {
+  background-color: yellow;
+  color: #333;
+  display: block;
+  font-weight: 1000;
+  overflow: hidden;
+  position: absolute;
+  padding-left: 0.5rem;
+  top: 0.2rem;
+  left: 277px;
+  animation: openclose 5s ease-in-out infinite;
 }
 
-.container p span.cursor.typing {
-  animation: none;
+.word1, .word2, .word3 {
+  font-family: tahoma;
 }
 
-@keyframes blink {
+@keyframes openclose {
   0% {
-    background-color: #ccc;
+    top: 0.3rem;
+    width: 0;
   }
-
-  49% {
-    background-color: #ccc;
+  5% {
+    width: 0;
   }
-
-  50% {
-    background-color: transparent;
+  15% {
+    width: 230px;
   }
-
-  99% {
-    background-color: transparent;
+  30% {
+    top: 0.3rem;
+    width: 230px;
   }
-
+  33% {
+    top: 0.3rem;
+    width: 0;
+  }
+  35% {
+   top: 0.3rem;
+    width: 0;
+  }
+  38% {
+   top: -6rem;
+    
+  }
+  48% {
+   top: -6rem;
+    width: 190px;
+  }
+  66% {
+    top: -6rem;
+    width: 0;
+    text-indent: 0;
+  }
+  71% {
+    top: -11rem;
+    width: 0;
+    text-indent: 5px;
+  }
+  86% {
+    top: -11rem;
+    width: 285px;
+  }
+  95% {
+    top: -11rem;
+    width: 285px;
+  }
+  98% {
+    top: -11rem;
+    width: 0;
+    text-indent: 5px;
+  }
   100% {
-    background-color: #ccc;
+    top: 0;
+    width: 0;
+    text-indent: 0;
   }
 }
