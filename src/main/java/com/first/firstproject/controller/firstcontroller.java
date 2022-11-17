@@ -1,0 +1,15 @@
+package com.first.firstproject.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class firstcontroller {
+	
+//	
+//	    @RequestMapping("/")
+//	    public String index() {
+//	        return "index";
+//	    }
+	
+}
